@@ -134,15 +134,14 @@ public enum Manufacturer {
 	 */
 	ADOBE(23, "Adobe Systems Inc."),
 	/**
-	 * Onshape, Inc.
-	 */
-	ONSHAPE(25, "Onshape, Inc."),
-	/**
 	 * Canonical Ltd.
 	 */
-	CONONICAL(26,"Canonical Ltd.");
+	CONONICAL(26,"Canonical Ltd."),
+	/**
+	 * Onshape, Inc.
+	 */
+	ONSHAPE(45, "Onshape, Inc.");
 
-	
 	private final short id;
 	private final String name;
 	
