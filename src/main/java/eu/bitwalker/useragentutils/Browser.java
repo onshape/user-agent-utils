@@ -245,10 +245,8 @@ public enum Browser {
 	/*
 	 * Onshape client.
 	 */
-	ONSHAPE(                Manufacturer.ONSHAPE, null,            1, "Onshape", new String[] {"Onshape"}, null, BrowserType.APP, RenderingEngine.OTHER, "Onshape\\/(([\\d]+)\\.([\\d]+).([\\d]+))"),
-		ONSHAPE_IPAD( 	Manufacturer.ONSHAPE, Browser.ONSHAPE, 2, "iPad",    new String[] {"iPad"},    null, BrowserType.APP, RenderingEngine.OTHER, "iPad"),
-		ONSHAPE_IPHONE(	Manufacturer.ONSHAPE, Browser.ONSHAPE, 3, "iPhone",  new String[] {"iPhone"},  null, BrowserType.APP, RenderingEngine.OTHER, "iPhone"),
-		ONSHAPE_ANDROID(Manufacturer.ONSHAPE, Browser.ONSHAPE, 4, "Android", new String[] {"Android"}, null, BrowserType.APP, RenderingEngine.OTHER, "Linux"),
+	ONSHAPE(        Manufacturer.ONSHAPE, null,            1, "Onshape",   new String[] {"Onshape"},   null, BrowserType.APP, RenderingEngine.OTHER, "Onshape\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+		ONSHAPE1( 	Manufacturer.ONSHAPE, Browser.ONSHAPE, 2, "Onshape 1", new String[] {"Onshape/1"}, null, BrowserType.APP, RenderingEngine.OTHER, null),
 
 	SEAMONKEY(		Manufacturer.OTHER, null, 15, "SeaMonkey", new String[]{"SeaMonkey"}, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, "SeaMonkey\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)"), // using Gecko Engine
 	

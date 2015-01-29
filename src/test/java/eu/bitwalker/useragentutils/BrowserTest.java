@@ -472,15 +472,18 @@ public class BrowserTest {
 	};
 	
 	String[] onshapeIPad = {
-			"Onshape/1.13.8 (iPad; iOS 8.1.2; Scale/2.00)"
+			"Onshape/1.13.8 (iPad; iOS 8.1.2; Scale/2.00)",
+			"Onshape/1.16 (iPad; iOS 8.1.2; Scale/2.00)"
 	};
 
 	String[] onshapeIPhone = {
-			"Onshape/1.13.8 (iPhone; iOS 8.1.2; Scale/3.00)"
+			"Onshape/1.13.8 (iPhone; iOS 8.1.2; Scale/3.00)",
+			"Onshape/1.16 (iPhone; iOS 8.1.2; Scale/3.00)"
 	};
 
 	String[] onshapeAndroid = {
-			"Onshape/1.13.8 (Linux; Android 5.0.1; nvidia SHIELD Tablet)"
+			"Onshape/1.13.8 (Linux; Android 5.0.1; nvidia SHIELD Tablet)",
+			"Onshape/1.16 (Linux; Android 5.0.1; nvidia SHIELD Tablet)"
 	};
 
 	String[] silk = {
@@ -649,9 +652,9 @@ public class BrowserTest {
 		testAgents(proxy, Browser.DOWNLOAD);
 		testAgents(thunderbird3, Browser.THUNDERBIRD3);
 		testAgents(thunderbird2, Browser.THUNDERBIRD2);
-                testAgents(onshapeIPad, Browser.ONSHAPE_IPAD);
-                testAgents(onshapeIPhone, Browser.ONSHAPE_IPHONE);
-                testAgents(onshapeAndroid, Browser.ONSHAPE_ANDROID);
+                testAgents(onshapeIPad, Browser.ONSHAPE1);
+                testAgents(onshapeIPhone, Browser.ONSHAPE1);
+                testAgents(onshapeAndroid, Browser.ONSHAPE1);
 		testAgents(silk, Browser.SILK);
 		testAgents(iTunes, Browser.APPLE_ITUNES);
 		testAgents(appStore, Browser.APPLE_APPSTORE);
