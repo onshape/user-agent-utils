@@ -370,6 +370,18 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7 (via ggpht.com)" // Gmail proxy server
 	};
 	
+	String[] onshapeIPad = {
+			"Onshape/1.13.8 (iPad; iOS 8.1.2; Scale/2.00)"
+	};
+
+	String[] onshapeIPhone = {
+			"Onshape/1.13.8 (iPhone; iOS 8.1.2; Scale/3.00)"
+	};
+
+	String[] onshapeAndroid = {
+			"Onshape/1.13.8 (Linux; Android 5.0.1; nvidia SHIELD Tablet)"
+	};
+
 	String[] unknown = {
 		null	
 	};
@@ -422,7 +434,7 @@ public class OperatingSystemTest {
 		testAgents(android1g, OperatingSystem.ANDROID1);
 		testAgents(android2g, OperatingSystem.ANDROID2);
 		testAgents(android4g, OperatingSystem.ANDROID4);
-        testAgents(android5g, OperatingSystem.ANDROID5);
+		testAgents(android5g, OperatingSystem.ANDROID5);
 		testAgents(android2_tablet, OperatingSystem.ANDROID2_TABLET);
 		testAgents(android3_tablet, OperatingSystem.ANDROID3_TABLET);
 		testAgents(android4_tablet, OperatingSystem.ANDROID4_TABLET);
@@ -439,6 +451,9 @@ public class OperatingSystemTest {
 		testAgents(proxy, OperatingSystem.PROXY);
 		testAgents(genericMobile, OperatingSystem.UNKNOWN_MOBILE);
 		testAgents(genericTablet, OperatingSystem.UNKNOWN_TABLET);
+		testAgents(onshapeIPad, OperatingSystem.iOS8_1_IPAD);
+		testAgents(onshapeIPhone, OperatingSystem.iOS8_1_IPHONE);
+		testAgents(onshapeAndroid, OperatingSystem.ANDROID5_TABLET);
 		testAgents(unknown, OperatingSystem.UNKNOWN);
 
 	}
