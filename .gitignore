@@ -1,4 +1,5 @@
 bin/
+javadoc/
 .project
 .classpath
 .settings

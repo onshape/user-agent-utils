@@ -136,10 +136,12 @@ public enum Manufacturer {
 	/**
 	 * Canonical Ltd.
 	 */
-	CONONICAL(25,"Canonical Ltd.");
-	
-	
-	
+	CONONICAL(26,"Canonical Ltd."),
+	/**
+	 * Onshape, Inc.
+	 */
+	ONSHAPE(45, "Onshape, Inc.");
+
 	private final short id;
 	private final String name;
 	
