@@ -274,10 +274,10 @@ public enum Browser {
 	/*
 	 * Onshape client.
 	 */
-	ONSHAPE(                Manufacturer.ONSHAPE, null,            1, "Onshape", new String[] {"Onshape"}, null, BrowserType.APP, RenderingEngine.OTHER, "Onshape\\/(([\\d]+)\\.([\\d]+).([\\d]+))"),
-		ONSHAPE_IPAD( 	Manufacturer.ONSHAPE, Browser.ONSHAPE, 2, "iPad",    new String[] {"iPad"},    null, BrowserType.APP, RenderingEngine.OTHER, "iPad"),
-		ONSHAPE_IPHONE(	Manufacturer.ONSHAPE, Browser.ONSHAPE, 3, "iPhone",  new String[] {"iPhone"},  null, BrowserType.APP, RenderingEngine.OTHER, "iPhone"),
-		ONSHAPE_ANDROID(Manufacturer.ONSHAPE, Browser.ONSHAPE, 4, "Android", new String[] {"Android"}, null, BrowserType.APP, RenderingEngine.OTHER, "Linux"),
+	ONSHAPE(                Manufacturer.ONSHAPE, null,            1, "Onshape", new String[] { "Onshape" }, null, BrowserType.APP, RenderingEngine.OTHER, "Onshape\\/(([\\d]+)\\.([\\d]+)(\\.[\\d]+)?)"),
+		ONSHAPE_IPAD( 	Manufacturer.ONSHAPE, Browser.ONSHAPE, 2, "Onshape iPad",    new String[] { "iPad" },    null, BrowserType.APP, RenderingEngine.OTHER, null),
+		ONSHAPE_IPHONE(	Manufacturer.ONSHAPE, Browser.ONSHAPE, 3, "Onshape iPhone",  new String[] { "iPhone" },  null, BrowserType.APP, RenderingEngine.OTHER, null),
+		ONSHAPE_ANDROID(Manufacturer.ONSHAPE, Browser.ONSHAPE, 4, "Onshape Android", new String[] { "Android" }, null, BrowserType.APP, RenderingEngine.OTHER, null),
 
 	SEAMONKEY(		Manufacturer.OTHER, null, 15, "SeaMonkey", new String[]{"SeaMonkey"}, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, "SeaMonkey\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)"), // using Gecko Engine
 
@@ -373,7 +373,7 @@ public enum Browser {
 		Pattern pattern = this.getVersionRegEx();
 		if (userAgentString != null && pattern != null) {
 			Matcher matcher = pattern.matcher(userAgentString);
-			if (matcher.find()) {
+			if (matcher.find() && matcher.groupCount() > 1) {
 				String fullVersionString = matcher.group(1);
 				String majorVersion = matcher.group(2);
 				String minorVersion = "0";
