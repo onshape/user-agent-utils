@@ -182,8 +182,13 @@ public class OperatingSystemTest {
 	{
 			"Mozilla/5.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/538.34.9 (KHTML, like Gecko) Mobile/12A4265u"
 	};
-	
-	String[] iPhone8_1 = 
+
+	String[] iPhone9 =
+	{
+			"Onshape/1.36.6567 (iPhone; iOS 9.0.2; Scale/2.00)"
+	};
+
+	String[] iPhone8_1 =
 	{
 			"Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B401 Safari/600.1.4"
 	};
@@ -436,6 +441,7 @@ public class OperatingSystemTest {
 		testAgents(iPhone8, OperatingSystem.iOS8_IPHONE);
 		testAgents(iPhone8_1, OperatingSystem.iOS8_1_IPHONE);
 		testAgents(iPhone8_3, OperatingSystem.iOS8_3_IPHONE);
+		testAgents(iPhone9, OperatingSystem.iOS9_IPHONE);
 		testAgents(iPods, OperatingSystem.MAC_OS_X_IPOD);
 		testAgents(iPadIos6, OperatingSystem.iOS6_IPAD);
 		testAgents(iPadIos7, OperatingSystem.iOS7_IPAD);

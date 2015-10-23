@@ -516,11 +516,14 @@ public class BrowserTest {
 	};
 
 	String[] onshapeIPhone = {
-			"Onshape/1.13.8 (iPhone; iOS 8.1.2; Scale/3.00)"
+			"Onshape/1.13.8 (iPhone; iOS 8.1.2; Scale/3.00)",
+			"Onshape/1.36.6567 (iPhone; iOS 9.0.2; Scale/2.00)"
 	};
 
 	String[] onshapeAndroid = {
-			"Onshape/1.13.8 (Linux; Android 5.0.1; nvidia SHIELD Tablet)"
+			"Onshape/1.13.8 (Linux; Android 5.0.1; nvidia SHIELD Tablet)",
+			"Onshape/1.37.3671 (NVIDIA | SHIELD Tablet; Android 5.1.1)",
+			"Onshape/1.37.3671 (htc | Nexus 9; Android 5.1.1)"
 	};
 
 	String[] silk = {
@@ -604,7 +607,9 @@ public class BrowserTest {
         testVersions("Mozilla/5.0 (iPad; CPU OS 7_0_3 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Coast/1.1.3.65998 Mobile/11B511 Safari/7534.48.3", new Version("1.1.3.65998", "1", "1"));
         testVersions("Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36 OPR/23.0.1522.60", new Version("23.0.1522.60", "23", "0"));
         testVersions("Mozilla/5.0 (Linux; Android 4.1.2; HTC One SV Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.81 Mobile Safari/537.36 OPR/28.0.1764.90386", new Version("28.0.1764.90386", "28", "0"));
-
+		testVersions("Onshape/1.36.6567 (iPhone; iOS 9.0.2; Scale/2.00)", new Version("1.36.6567", "1", "36"));
+		testVersions("Onshape/1.37.3671 (NVIDIA | SHIELD Tablet; Android 5.1.1)", new Version("1.37.3671", "1", "37"));
+		testVersions("Onshape/1.37 (NVIDIA | SHIELD Tablet; Android 5.1.1)", new Version("1.37", "1", "37"));
 	}
 
 	private void testVersions(String ua, Version expectedVersion) {
@@ -705,9 +710,9 @@ public class BrowserTest {
 		testAgents(proxy, Browser.DOWNLOAD);
 		testAgents(thunderbird3, Browser.THUNDERBIRD3);
 		testAgents(thunderbird2, Browser.THUNDERBIRD2);
-                testAgents(onshapeIPad, Browser.ONSHAPE_IPAD);
-                testAgents(onshapeIPhone, Browser.ONSHAPE_IPHONE);
-                testAgents(onshapeAndroid, Browser.ONSHAPE_ANDROID);
+		testAgents(onshapeIPad, Browser.ONSHAPE_IPAD);
+		testAgents(onshapeIPhone, Browser.ONSHAPE_IPHONE);
+		testAgents(onshapeAndroid, Browser.ONSHAPE_ANDROID);
 		testAgents(silk, Browser.SILK);
 		testAgents(iTunes, Browser.APPLE_ITUNES);
 		testAgents(appStore, Browser.APPLE_APPSTORE);
