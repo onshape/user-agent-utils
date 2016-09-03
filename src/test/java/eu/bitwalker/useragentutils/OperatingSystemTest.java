@@ -47,9 +47,6 @@ import java.util.List;
 
 import org.junit.Test;
 
-import eu.bitwalker.useragentutils.DeviceType;
-import eu.bitwalker.useragentutils.OperatingSystem;
-
 /**
  * @author harald
  *
@@ -181,11 +178,6 @@ public class OperatingSystemTest {
     String[] iPhone8 =
     {
         "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/538.34.9 (KHTML, like Gecko) Mobile/12A4265u"
-    };
-
-    String[] iPhone9 =
-    {
-        "Onshape/1.36.6567 (iPhone; iOS 9.0.2; Scale/2.00)"
     };
 
     String[] iPhone8_1 =
@@ -397,6 +389,78 @@ public class OperatingSystemTest {
         "Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7 (via ggpht.com)" // Gmail proxy server
     };
 
+    String[] onshapeIPhone9 = {
+        "Onshape/1.36.6567 (iPhone; iOS 9.0.2; Scale/2.00)"
+    };
+
+    String[] onshapeIPhone84 = {
+        "Onshape/1.36.6567 (iPhone; iOS 8.4.2; Scale/2.00)"
+    };
+
+    String[] onshapeIPhone83 = {
+        "Onshape/1.36.6567 (iPhone; iOS 8.3.2; Scale/2.00)"
+    };
+
+    String[] onshapeIPhone82 = {
+        "Onshape/1.36.6567 (iPhone; iOS 8.2.2; Scale/2.00)"
+    };
+
+    String[] onshapeIPhone81 = {
+        "Onshape/1.36.6567 (iPhone; iOS 8.1.2; Scale/2.00)"
+    };
+
+    String[] onshapeIPhone8 = {
+        "Onshape/1.36.6567 (iPhone; iOS 8.0.2; Scale/2.00)"
+    };
+
+    String[] onshapeIPhone7 = {
+        "Onshape/1.36.6567 (iPhone; iOS 7.0.2; Scale/2.00)"
+    };
+
+    String[] onshapeIPad9 = {
+        "Onshape/1.36.6567 (iPad; iOS 9.0.2; Scale/2.00)"
+    };
+
+    String[] onshapeIPad84 = {
+        "Onshape/1.36.6567 (iPad; iOS 8.4.2; Scale/2.00)"
+    };
+
+    String[] onshapeIPad83 = {
+        "Onshape/1.36.6567 (iPad; iOS 8.3.2; Scale/2.00)"
+    };
+
+    String[] onshapeIPad82 = {
+        "Onshape/1.36.6567 (iPad; iOS 8.2.2; Scale/2.00)"
+    };
+
+    String[] onshapeIPad81 = {
+        "Onshape/1.36.6567 (iPad; iOS 8.1.2; Scale/2.00)"
+    };
+
+    String[] onshapeIPad8 = {
+        "Onshape/1.36.6567 (iPad; iOS 8.0.2; Scale/2.00)"
+    };
+
+    String[] onshapeIPad7 = {
+        "Onshape/1.36.6567 (iPad; iOS 7.0.2; Scale/2.00)"
+    };
+
+    String[] onshapeAndroid4 = {
+        "Onshape/1.51.4439 (samsung | SM-T560; Android 4.4.4)"
+    };
+
+    String[] onshapeAndroid5 = {
+        "Onshape/1.51.4439 (samsung | SM-G360T; Android 5.1.1)"
+    };
+
+    String[] onshapeAndroidTablet4 = {
+        "Onshape/1.51.4439 (Tablet Express | Dragon Touch M10X; Android 4.4.2)"
+    };
+
+    String[] onshapeAndroidTablet6 = {
+        "Onshape/1.51.4439 (NVIDIA | SHIELD Tablet; Android 6.0.1)"
+    };
+
     String[] unknown = {
         null
     };
@@ -414,6 +478,25 @@ public class OperatingSystemTest {
      */
     @Test
     public void testParseUserAgentString() {
+        testAgents(onshapeIPhone9, OperatingSystem.ONSHAPE_IPHONE_9);
+        testAgents(onshapeIPhone84, OperatingSystem.ONSHAPE_IPHONE_8_4);
+        testAgents(onshapeIPhone83, OperatingSystem.ONSHAPE_IPHONE_8_3);
+        testAgents(onshapeIPhone82, OperatingSystem.ONSHAPE_IPHONE_8_2);
+        testAgents(onshapeIPhone81, OperatingSystem.ONSHAPE_IPHONE_8_1);
+        testAgents(onshapeIPhone8, OperatingSystem.ONSHAPE_IPHONE_8);
+        testAgents(onshapeIPhone7, OperatingSystem.ONSHAPE_IPHONE_7);
+        testAgents(onshapeIPad9, OperatingSystem.ONSHAPE_IPAD_9);
+        testAgents(onshapeIPad84, OperatingSystem.ONSHAPE_IPAD_8_4);
+        testAgents(onshapeIPad83, OperatingSystem.ONSHAPE_IPAD_8_3);
+        testAgents(onshapeIPad82, OperatingSystem.ONSHAPE_IPAD_8_2);
+        testAgents(onshapeIPad81, OperatingSystem.ONSHAPE_IPAD_8_1);
+        testAgents(onshapeIPad8, OperatingSystem.ONSHAPE_IPAD_8);
+        testAgents(onshapeIPad7, OperatingSystem.ONSHAPE_IPAD_7);
+        testAgents(onshapeAndroid4, OperatingSystem.ONSHAPE_ANDROID_4);
+        testAgents(onshapeAndroid5, OperatingSystem.ONSHAPE_ANDROID_5);
+        testAgents(onshapeAndroidTablet4, OperatingSystem.ONSHAPE_ANDROID_4_TABLET);
+        testAgents(onshapeAndroidTablet6, OperatingSystem.ONSHAPE_ANDROID_6_TABLET);
+
         testAgents(windowsCEdivices, OperatingSystem.WINDOWS_MOBILE);
         testAgents(windowsMobile7, OperatingSystem.WINDOWS_MOBILE7);
         testAgents(windowsMobile8, OperatingSystem.WINDOWS_PHONE8);
@@ -441,7 +524,6 @@ public class OperatingSystemTest {
         testAgents(iPhone8, OperatingSystem.iOS8_IPHONE);
         testAgents(iPhone8_1, OperatingSystem.iOS8_1_IPHONE);
         testAgents(iPhone8_3, OperatingSystem.iOS8_3_IPHONE);
-        testAgents(iPhone9, OperatingSystem.iOS9_IPHONE);
         testAgents(iPods, OperatingSystem.MAC_OS_X_IPOD);
         testAgents(iPadIos6, OperatingSystem.iOS6_IPAD);
         testAgents(iPadIos7, OperatingSystem.iOS7_IPAD);
@@ -516,15 +598,12 @@ public class OperatingSystemTest {
     public void testValueOf() {
         OperatingSystem operatingSystem = OperatingSystem.parseUserAgentString(symbian9phones[0]);
         assertEquals(OperatingSystem.valueOf(operatingSystem.getId()), operatingSystem);
-        try
-            {
-                operatingSystem = OperatingSystem.valueOf((short)0);
-                fail("Should have thrown IllegalArgumentException");
-            }
-        catch (IllegalArgumentException e)
-            {
-                // good
-            }
+        try {
+            operatingSystem = OperatingSystem.valueOf((short)0);
+            fail("Should have thrown IllegalArgumentException");
+        } catch (IllegalArgumentException e) {
+            // good
+        }
     }
 
     /**
@@ -534,15 +613,12 @@ public class OperatingSystemTest {
     public void testValueOfString() {
         OperatingSystem operatingSystem = OperatingSystem.parseUserAgentString(symbian9phones[0]);
         assertEquals(OperatingSystem.valueOf(operatingSystem.toString()), operatingSystem);
-        try
-            {
-                operatingSystem = OperatingSystem.valueOf("illegal");
-                fail("Should have thrown IllegalArgumentException");
-            }
-        catch (IllegalArgumentException e)
-            {
-                // good
-            }
+        try {
+            operatingSystem = OperatingSystem.valueOf("illegal");
+            fail("Should have thrown IllegalArgumentException");
+        } catch (IllegalArgumentException e) {
+            // good
+        }
     }
 
     /**
@@ -553,28 +629,24 @@ public class OperatingSystemTest {
 
         List<Short> retrievedIdValues = new ArrayList<Short>();
 
-        for (OperatingSystem operatingSystem : OperatingSystem.values())
-            {
-                assertTrue(!retrievedIdValues.contains(operatingSystem.getId()));
-                retrievedIdValues.add(operatingSystem.getId());
-            }
-
+        for (OperatingSystem operatingSystem : OperatingSystem.values()) {
+            assertTrue(operatingSystem.getId() + " (" + operatingSystem + ") is not unique", !retrievedIdValues.contains(operatingSystem.getId()));
+            retrievedIdValues.add(operatingSystem.getId());
+        }
     }
 
     private void testDeviceTypes(String[] agentStrings, DeviceType expectedDeviceType)
     {
-        for (String agentString : agentStrings)
-            {
-                assertEquals(expectedDeviceType, OperatingSystem.parseUserAgentString(agentString).getDeviceType());
-            }
+        for (String agentString : agentStrings) {
+            assertEquals(expectedDeviceType, OperatingSystem.parseUserAgentString(agentString).getDeviceType());
+        }
     }
 
     private void testAgents(String[] agentStrings, OperatingSystem expectedOperatingSystem)
     {
-        for (String agentString : agentStrings)
-            {
-                assertEquals(expectedOperatingSystem, OperatingSystem.parseUserAgentString(agentString));
-            }
+        for (String agentString : agentStrings) {
+            assertEquals(expectedOperatingSystem, OperatingSystem.parseUserAgentString(agentString));
+        }
     }
 
 }

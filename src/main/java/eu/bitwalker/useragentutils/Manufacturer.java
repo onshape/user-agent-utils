@@ -46,7 +46,7 @@ package eu.bitwalker.useragentutils;
 public enum Manufacturer {
 
     /**
-     * Unknow or rare manufacturer
+     * Unknown or rare manufacturer
      */
     OTHER(1, "Other"),
     /**
