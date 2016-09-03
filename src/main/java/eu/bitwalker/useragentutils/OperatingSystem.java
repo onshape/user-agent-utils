@@ -67,16 +67,56 @@ public enum OperatingSystem {
     WINDOWS_98(             Manufacturer.MICROSOFT,OperatingSystem.WINDOWS,5, "Windows 98", new String[] { "Windows 98","Win98" },  new String[] { "Palm" }, DeviceType.COMPUTER, null ), // before Win
     XBOX_OS(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS,62, "Xbox OS",new String[]{"xbox"},new String[]{}, DeviceType.GAME_CONSOLE, null),
 
-    ANDROID(                Manufacturer.GOOGLE,null, 0, "Android", new String[] { "Android" },  new String[] {"Ubuntu"}, DeviceType.MOBILE, null ),
-    ANDROID5(               Manufacturer.GOOGLE,OperatingSystem.ANDROID, 5, "Android 5.x", new String[] { "Android 5", "Android-5" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
-    ANDROID5_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID5, 50, "Android 5.x Tablet", new String[] { "Android 5", "Android-5"}, new String[] { "mobile", "glass"}, DeviceType.TABLET, null ),
-    ANDROID4(               Manufacturer.GOOGLE,OperatingSystem.ANDROID, 4, "Android 4.x", new String[] { "Android 4", "Android-4" },   new String[] { "glass", "ubuntu"}, DeviceType.MOBILE, null ),
-    ANDROID4_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID4, 40, "Android 4.x Tablet", new String[] { "Android 4", "Android-4"}, new String[] { "mobile", "glass", "ubuntu" }, DeviceType.TABLET, null ),
-    ANDROID4_WEARABLE(Manufacturer.GOOGLE,OperatingSystem.ANDROID, 400, "Android 4.x", new String[] { "Android 4" }, new String[] {"ubuntu"}, DeviceType.WEARABLE, null ),
-    ANDROID3_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID, 30, "Android 3.x Tablet", new String[] { "Android 3" },  null, DeviceType.TABLET, null ), // as long as there are not Android 3.x phones this should be enough
-    ANDROID2(               Manufacturer.GOOGLE,OperatingSystem.ANDROID, 2, "Android 2.x", new String[] { "Android 2" },  null, DeviceType.MOBILE, null ),
-    ANDROID2_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID2, 20, "Android 2.x Tablet", new String[] { "Kindle Fire", "GT-P1000","SCH-I800" },  null, DeviceType.TABLET, null ),
-    ANDROID1(               Manufacturer.GOOGLE,OperatingSystem.ANDROID, 1, "Android 1.x", new String[] { "Android 1" },  null, DeviceType.MOBILE, null ),
+    /** Onshape top-level */
+    ONSHAPE(                  Manufacturer.ONSHAPE, null, 2000, "Onshape", new String[] { "Onshape" }, null, DeviceType.MOBILE, null),
+    /** Onshape Android Phone */
+    ONSHAPE_ANDROID(          Manufacturer.GOOGLE, OperatingSystem.ONSHAPE, 2100, "Onshape Android", new String[] { "Android" }, new String[] { "Tablet" }, DeviceType.MOBILE, null),
+    ONSHAPE_ANDROID_7(        Manufacturer.GOOGLE, OperatingSystem.ONSHAPE_ANDROID, 2170, "Android 7.x", new String[] { "Android 7." }, new String[] { "Tablet" }, DeviceType.MOBILE, null),
+    ONSHAPE_ANDROID_6(        Manufacturer.GOOGLE, OperatingSystem.ONSHAPE_ANDROID, 2160, "Android 6.x", new String[] { "Android 6." }, new String[] { "Tablet" }, DeviceType.MOBILE, null),
+    ONSHAPE_ANDROID_5(        Manufacturer.GOOGLE, OperatingSystem.ONSHAPE_ANDROID, 2150, "Android 5.x", new String[] { "Android 5." }, new String[] { "Tablet" }, DeviceType.MOBILE, null),
+    ONSHAPE_ANDROID_4(        Manufacturer.GOOGLE, OperatingSystem.ONSHAPE_ANDROID, 2140, "Android 4.x", new String[] { "Android 4." }, new String[] { "Tablet" }, DeviceType.MOBILE, null),
+    /** Onshape Android Tablet */
+    ONSHAPE_ANDROID_TABLET(   Manufacturer.GOOGLE, OperatingSystem.ONSHAPE_ANDROID, 2200, "Onshape Android Tablet", new String[] { "Tablet" }, null, DeviceType.TABLET, null),
+    ONSHAPE_ANDROID_7_TABLET( Manufacturer.GOOGLE, OperatingSystem.ONSHAPE_ANDROID_TABLET, 2270, "Android Tablet 7.x", new String[] { "Android 7." }, null, DeviceType.TABLET, null),
+    ONSHAPE_ANDROID_6_TABLET( Manufacturer.GOOGLE, OperatingSystem.ONSHAPE_ANDROID_TABLET, 2260, "Android Tablet 6.x", new String[] { "Android 6." }, null, DeviceType.TABLET, null),
+    ONSHAPE_ANDROID_5_TABLET( Manufacturer.GOOGLE, OperatingSystem.ONSHAPE_ANDROID_TABLET, 2250, "Android Tablet 5.x", new String[] { "Android 5." }, null, DeviceType.TABLET, null),
+    ONSHAPE_ANDROID_4_TABLET( Manufacturer.GOOGLE, OperatingSystem.ONSHAPE_ANDROID_TABLET, 2240, "Android Tablet 4.x", new String[] { "Android 4." }, null, DeviceType.TABLET, null),
+    /** Onshape iPhone */
+    ONSHAPE_IPHONE(           Manufacturer.APPLE, OperatingSystem.ONSHAPE, 2200, "Onshape iPhone", new String[] { "iPhone; " }, null, DeviceType.MOBILE, null),
+    ONSHAPE_IPHONE_10(        Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPHONE, 2210, "iOS 10 (iPhone)", new String[] { "iOS 10." }, null, DeviceType.MOBILE, null),
+    ONSHAPE_IPHONE_9(         Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPHONE, 2290, "iOS 9 (iPhone)", new String[] { "iOS 9." }, null, DeviceType.MOBILE, null),
+    ONSHAPE_IPHONE_8_4(       Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPHONE, 2284, "iOS 8.4 (iPhone)", new String[] { "iOS 8.4." }, null, DeviceType.MOBILE, null),
+    ONSHAPE_IPHONE_8_3(       Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPHONE, 2283, "iOS 8.3 (iPhone)", new String[] { "iOS 8.3." }, null, DeviceType.MOBILE, null),
+    ONSHAPE_IPHONE_8_2(       Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPHONE, 2282, "iOS 8.2 (iPhone)", new String[] { "iOS 8.2." }, null, DeviceType.MOBILE, null),
+    ONSHAPE_IPHONE_8_1(       Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPHONE, 2281, "iOS 8.1 (iPhone)", new String[] { "iOS 8.1." }, null, DeviceType.MOBILE, null),
+    ONSHAPE_IPHONE_8(         Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPHONE, 2280, "iOS 8 (iPhone)", new String[] { "iOS 8." }, null, DeviceType.MOBILE, null),
+    ONSHAPE_IPHONE_7(         Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPHONE, 2270, "iOS 7 (iPhone)", new String[] { "iOS 7." }, null, DeviceType.MOBILE, null),
+    /** Onshape iPad */
+    ONSHAPE_IPAD(             Manufacturer.APPLE, OperatingSystem.ONSHAPE, 2300, "Onshape iPad", new String[] { "iPad; " }, null, DeviceType.TABLET, null),
+    ONSHAPE_IPAD_10(          Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPAD, 2310, "iOS 10 (iPad)", new String[] { "iOS 10." }, null, DeviceType.TABLET, null),
+    ONSHAPE_IPAD_9(           Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPAD, 2390, "iOS 9 (iPad)", new String[] { "iOS 9." }, null, DeviceType.TABLET, null),
+    ONSHAPE_IPAD_8_4(         Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPAD, 2384, "iOS 8.4 (iPad)", new String[] { "iOS 8.4." }, null, DeviceType.TABLET, null),
+    ONSHAPE_IPAD_8_3(         Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPAD, 2383, "iOS 8.3 (iPad)", new String[] { "iOS 8.3." }, null, DeviceType.TABLET, null),
+    ONSHAPE_IPAD_8_2(         Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPAD, 2382, "iOS 8.2 (iPad)", new String[] { "iOS 8.2." }, null, DeviceType.TABLET, null),
+    ONSHAPE_IPAD_8_1(         Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPAD, 2381, "iOS 8.1 (iPad)", new String[] { "iOS 8.1." }, null, DeviceType.TABLET, null),
+    ONSHAPE_IPAD_8(           Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPAD, 2380, "iOS 8 (iPad)", new String[] { "iOS 8." }, null, DeviceType.TABLET, null),
+    ONSHAPE_IPAD_7(           Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPAD, 2370, "iPad 7.x", new String[] { "iOS 7." }, null, DeviceType.TABLET, null),
+
+    ANDROID(           Manufacturer.GOOGLE, null, 0, "Android", new String[] { "Android" },  new String[] { "Ubuntu" }, DeviceType.MOBILE, null ),
+    ANDROID7(          Manufacturer.GOOGLE, OperatingSystem.ANDROID, 7, "Android 7.x", new String[] { "Android 7", "Android-7" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
+    ANDROID7_TABLET(   Manufacturer.GOOGLE, OperatingSystem.ANDROID7, 70, "Android 7.x Tablet", new String[] { "Android 7", "Android-7"}, new String[] { "mobile", "glass"}, DeviceType.TABLET, null ),
+    ANDROID6(          Manufacturer.GOOGLE, OperatingSystem.ANDROID, 6, "Android 6.x", new String[] { "Android 6", "Android-6" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
+    ANDROID6_TABLET(   Manufacturer.GOOGLE, OperatingSystem.ANDROID6, 60, "Android 6.x Tablet", new String[] { "Android 6", "Android-6"}, new String[] { "mobile", "glass"}, DeviceType.TABLET, null ),
+    ANDROID5(          Manufacturer.GOOGLE, OperatingSystem.ANDROID, 5, "Android 5.x", new String[] { "Android 5", "Android-5" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
+    ANDROID5_TABLET(   Manufacturer.GOOGLE, OperatingSystem.ANDROID5, 50, "Android 5.x Tablet", new String[] { "Android 5", "Android-5"}, new String[] { "mobile", "glass" }, DeviceType.TABLET, null ),
+    ANDROID4(          Manufacturer.GOOGLE, OperatingSystem.ANDROID, 4, "Android 4.x", new String[] { "Android 4", "Android-4" },   new String[] { "glass", "ubuntu" }, DeviceType.MOBILE, null ),
+    ANDROID4_TABLET(   Manufacturer.GOOGLE, OperatingSystem.ANDROID4, 40, "Android 4.x Tablet", new String[] { "Android 4", "Android-4"}, new String[] { "mobile", "glass", "ubuntu" }, DeviceType.TABLET, null ),
+    ANDROID4_WEARABLE( Manufacturer.GOOGLE, OperatingSystem.ANDROID, 400, "Android 4.x", new String[] { "Android 4" }, new String[] {"ubuntu"}, DeviceType.WEARABLE, null ),
+    ANDROID3_TABLET(   Manufacturer.GOOGLE, OperatingSystem.ANDROID, 30, "Android 3.x Tablet", new String[] { "Android 3" },  null, DeviceType.TABLET, null ), // as long as there are not Android 3.x phones this should be enough
+    ANDROID2(          Manufacturer.GOOGLE, OperatingSystem.ANDROID, 2, "Android 2.x", new String[] { "Android 2" },  null, DeviceType.MOBILE, null ),
+    ANDROID2_TABLET(   Manufacturer.GOOGLE, OperatingSystem.ANDROID2, 20, "Android 2.x Tablet", new String[] { "Kindle Fire", "GT-P1000","SCH-I800" },  null, DeviceType.TABLET, null ),
+    ANDROID1(          Manufacturer.GOOGLE, OperatingSystem.ANDROID, 1, "Android 1.x", new String[] { "Android 1" },  null, DeviceType.MOBILE, null ),
+
     /**
      * Generic Android mobile device without OS version number information
      */
@@ -100,7 +140,8 @@ public enum OperatingSystem {
     /**
      * iOS4, with the release of the iPhone 4, Apple renamed the OS to iOS.
      */
-    IOS(                    Manufacturer.APPLE,null, 2, "iOS", new String[] { "iOS", "iPhone OS", "like Mac OS X" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
+    IOS(            Manufacturer.APPLE,null, 2, "iOS", new String[] { "iOS", "iPhone OS", "like Mac OS X" },  new String[] { "Onshape" }, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
+    iOS10_IPHONE(   Manufacturer.APPLE,OperatingSystem.IOS, 100, "iOS 10 (iPhone)", new String[] { "iPhone OS 10", "iPhone; iOS 10.0" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
     iOS9_IPHONE(    Manufacturer.APPLE,OperatingSystem.IOS, 90, "iOS 9 (iPhone)", new String[] { "iPhone OS 9", "iPhone; iOS 9.0." },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
     iOS8_4_IPHONE(  Manufacturer.APPLE,OperatingSystem.IOS, 49, "iOS 8.4 (iPhone)", new String[] { "iPhone OS 8_4", "iPhone; iOS 8.4." },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
     iOS8_3_IPHONE(  Manufacturer.APPLE,OperatingSystem.IOS, 48, "iOS 8.3 (iPhone)", new String[] { "iPhone OS 8_3", "iPhone; iOS 8.3." },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
@@ -112,6 +153,7 @@ public enum OperatingSystem {
     iOS5_IPHONE(    Manufacturer.APPLE,OperatingSystem.IOS, 42, "iOS 5 (iPhone)", new String[] { "iPhone OS 5", "iPhone; iOS 5.0." },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
     iOS4_IPHONE(    Manufacturer.APPLE,OperatingSystem.IOS, 41, "iOS 4 (iPhone)", new String[] { "iPhone OS 4", "iPhone; iOS 4.0." },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
     MAC_OS_X_IPAD(  Manufacturer.APPLE, OperatingSystem.IOS, 50, "Mac OS X (iPad)", new String[] { "iPad" },  null, DeviceType.TABLET, null ), // before Mac OS X
+    iOS10_IPAD(     Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 210, "iOS 10 (iPad)", new String[] { "OS 10" },  null, DeviceType.TABLET, null ), // before Mac OS X
     iOS9_IPAD(      Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 58, "iOS 9 (iPad)", new String[] { "OS 9" },  null, DeviceType.TABLET, null ), // before Mac OS X
     iOS8_4_IPAD(    Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 57, "iOS 8.4 (iPad)", new String[] { "OS 8_4", "iPad; iOS 8.4." },  null, DeviceType.TABLET, null ), // before Mac OS X
     iOS8_3_IPAD(    Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 56, "iOS 8.3 (iPad)", new String[] { "OS 8_3", "iPad; iOS 8.3." },  null, DeviceType.TABLET, null ), // before Mac OS X
@@ -283,6 +325,26 @@ public enum OperatingSystem {
     }
 
     /**
+     * Return <code>true</code> if this operating system has the specified parent,
+     * <code>false</code> otherwise.
+     *
+     * @param os The operating system to look for in the parent chain
+     * @return <code>true</code> if this operating system has the specified parent,
+     * <code>false</code> otherwise
+     */
+    public boolean hasParent(OperatingSystem os) {
+        if (this.parent != null) {
+            if (this.parent.equals(os)) {
+                return true;
+            } else {
+                return parent.hasParent(os);
+            }
+        }
+
+        return false;
+    }
+
+    /**
      * Returns the manufacturer of the operating system
      * @return the manufacturer
      */
@@ -375,13 +437,13 @@ public enum OperatingSystem {
 
     private static OperatingSystem parseUserAgentLowercaseString(final String agentLowercaseString,
                                                                  List<OperatingSystem> operatingSystems) {
-        for (OperatingSystem operatingSystem : operatingSystems)
-            {
-                OperatingSystem match = operatingSystem.checkUserAgentLowercase(agentLowercaseString);
-                if (match != null) {
-                    return match; // either current operatingSystem or a child object
-                }
+        for (OperatingSystem operatingSystem : operatingSystems) {
+            OperatingSystem match = operatingSystem.checkUserAgentLowercase(agentLowercaseString);
+            if (match != null) {
+                return match; // either current operatingSystem or a child object
             }
+        }
+
         return OperatingSystem.UNKNOWN;
     }
 
@@ -393,11 +455,10 @@ public enum OperatingSystem {
      */
     public static OperatingSystem valueOf(short id)
     {
-        for (OperatingSystem operatingSystem : OperatingSystem.values())
-            {
-                if (operatingSystem.getId() == id)
-                    return operatingSystem;
-            }
+        for (OperatingSystem operatingSystem : OperatingSystem.values()) {
+            if (operatingSystem.getId() == id)
+                return operatingSystem;
+        }
 
         // same behavior as standard valueOf(string) method
         throw new IllegalArgumentException("No enum const for id " + id);
