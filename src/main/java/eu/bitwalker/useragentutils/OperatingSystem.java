@@ -334,11 +334,7 @@ public enum OperatingSystem {
      */
     public boolean hasParent(OperatingSystem os) {
         if (this.parent != null) {
-            if (this.parent.equals(os)) {
-                return true;
-            } else {
-                return parent.hasParent(os);
-            }
+            return this.parent.equals(os) || parent.hasParent(os);
         }
 
         return false;
