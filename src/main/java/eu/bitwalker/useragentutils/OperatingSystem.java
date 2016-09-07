@@ -101,6 +101,16 @@ public enum OperatingSystem {
     ONSHAPE_IPAD_8_1(         Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPAD, 2381, "iOS 8.1 (iPad)", new String[] { "iOS 8.1." }, null, DeviceType.TABLET, null),
     ONSHAPE_IPAD_8(           Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPAD, 2380, "iOS 8 (iPad)", new String[] { "iOS 8." }, null, DeviceType.TABLET, null),
     ONSHAPE_IPAD_7(           Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPAD, 2370, "iPad 7.x", new String[] { "iOS 7." }, null, DeviceType.TABLET, null),
+    /** Onshape iPod */
+    ONSHAPE_IPOD(             Manufacturer.APPLE, OperatingSystem.ONSHAPE, 2400, "Onshape iPod", new String[] { "iPod; " }, null, DeviceType.MOBILE, null),
+    ONSHAPE_IPOD_10(          Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPOD, 2410, "iOS 10 (iPod)", new String[] { "iOS 10." }, null, DeviceType.MOBILE, null),
+    ONSHAPE_IPOD_9(           Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPOD, 2490, "iOS 9 (iPod)", new String[] { "iOS 9." }, null, DeviceType.MOBILE, null),
+    ONSHAPE_IPOD_8_4(         Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPOD, 2484, "iOS 8.4 (iPod)", new String[] { "iOS 8.4" }, null, DeviceType.MOBILE, null),
+    ONSHAPE_IPOD_8_3(         Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPOD, 2483, "iOS 8.3 (iPod)", new String[] { "iOS 8.3" }, null, DeviceType.MOBILE, null),
+    ONSHAPE_IPOD_8_2(         Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPOD, 2482, "iOS 8.2 (iPod)", new String[] { "iOS 8.2" }, null, DeviceType.MOBILE, null),
+    ONSHAPE_IPOD_8_1(         Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPOD, 2481, "iOS 8.1 (iPod)", new String[] { "iOS 8.1" }, null, DeviceType.MOBILE, null),
+    ONSHAPE_IPOD_8(           Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPOD, 2480, "iOS 8 (iPod)", new String[] { "iOS 8." }, null, DeviceType.MOBILE, null),
+    ONSHAPE_IPOD_7(           Manufacturer.APPLE, OperatingSystem.ONSHAPE_IPOD, 2470, "iPod 7.x", new String[] { "iOS 7." }, null, DeviceType.MOBILE, null),
 
     ANDROID(           Manufacturer.GOOGLE, null, 0, "Android", new String[] { "Android" },  new String[] { "Ubuntu" }, DeviceType.MOBILE, null ),
     ANDROID7(          Manufacturer.GOOGLE, OperatingSystem.ANDROID, 7, "Android 7.x", new String[] { "Android 7", "Android-7" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
