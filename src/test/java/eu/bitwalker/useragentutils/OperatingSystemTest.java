@@ -445,6 +445,10 @@ public class OperatingSystemTest {
         "Onshape/1.36.6567 (iPad; iOS 7.0.2; Scale/2.00)"
     };
 
+    String[] onshapeIPod83 = {
+        "Onshape/1.46 (iPod; iOS 8.3; Scale/2.00)"
+    };
+
     String[] onshapeAndroid4 = {
         "Onshape/1.51.4439 (samsung | SM-T560; Android 4.4.4)"
     };
@@ -492,6 +496,7 @@ public class OperatingSystemTest {
         testAgents(onshapeIPad81, OperatingSystem.ONSHAPE_IPAD_8_1);
         testAgents(onshapeIPad8, OperatingSystem.ONSHAPE_IPAD_8);
         testAgents(onshapeIPad7, OperatingSystem.ONSHAPE_IPAD_7);
+        testAgents(onshapeIPod83, OperatingSystem.ONSHAPE_IPOD_8_3);
         testAgents(onshapeAndroid4, OperatingSystem.ONSHAPE_ANDROID_4);
         testAgents(onshapeAndroid5, OperatingSystem.ONSHAPE_ANDROID_5);
         testAgents(onshapeAndroidTablet4, OperatingSystem.ONSHAPE_ANDROID_4_TABLET);
@@ -645,7 +650,9 @@ public class OperatingSystemTest {
     private void testAgents(String[] agentStrings, OperatingSystem expectedOperatingSystem)
     {
         for (String agentString : agentStrings) {
-            assertEquals(expectedOperatingSystem, OperatingSystem.parseUserAgentString(agentString));
+            OperatingSystem detectedOperatingSystem = OperatingSystem.parseUserAgentString(agentString);
+            assertEquals("Expected: " + expectedOperatingSystem + ", Detected: " + detectedOperatingSystem,
+                expectedOperatingSystem, detectedOperatingSystem);
         }
     }
 
